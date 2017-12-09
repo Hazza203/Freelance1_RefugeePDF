@@ -9,6 +9,8 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.itextpdf.text.pdf.AcroFields;
@@ -53,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         if(!file.exists()){
             copyPDFtoExternal();
         }
-        
+
         try{
             Log.i(LOG_TAG, Environment.getExternalStorageDirectory().toString());
             reader = new PdfReader(Environment.getExternalStorageDirectory() + "/866.pdf");
@@ -144,6 +146,18 @@ public class MainActivity extends AppCompatActivity {
                     System.exit(0);
                 }
             }
+        }
+    }
+
+    public void onClick(View v){
+
+        TextView textView = findViewById(R.id.questionText);
+
+        if(v.getId() == R.id.btnYes){
+
+        }
+        else if(v.getId() == R.id.btnNo){
+            textView.setText(R.string.Q1);
         }
     }
 }
