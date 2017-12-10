@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
     private int count = 0;
     private final int MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL = 101;
     private PdfReader reader = null;
+    private int[] answers = new int[17];
+    private int questionNum = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,9 +45,6 @@ public class MainActivity extends AppCompatActivity {
         } else {
             init();
         }
-
-
-
 
     }
 
@@ -133,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    //If permissions granted, writed PDF to storage, if denied quit the app as we cannot continue
+    //If permissions granted, write PDF to storage, if denied quit the app as we cannot continue
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults){
         switch(requestCode){
@@ -151,13 +150,35 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClick(View v){
 
-        TextView textView = findViewById(R.id.questionText);
+        TextView questionText = findViewById(R.id.questionText);
 
         if(v.getId() == R.id.btnYes){
-
+            answers[questionNum] = 1;
+            questionNum++;
         }
         else if(v.getId() == R.id.btnNo){
-            textView.setText(R.string.Q1);
+            answers[questionNum] = 0;
+            questionNum++;
+        }
+
+        switch(questionNum){
+            case 0: questionText.setText(R.string.Q1); break;
+            case 1: questionText.setText(R.string.Q2); break;
+            case 2: questionText.setText(R.string.Q3); break;
+            case 3: questionText.setText(R.string.Q4); break;
+            case 4: questionText.setText(R.string.Q5); break;
+            case 5: questionText.setText(R.string.Q6); break;
+            case 6: questionText.setText(R.string.Q7); break;
+            case 7: questionText.setText(R.string.Q8); break;
+            case 8: questionText.setText(R.string.Q9); break;
+            case 9: questionText.setText(R.string.Q10); break;
+            case 10: questionText.setText(R.string.Q11); break;
+            case 11: questionText.setText(R.string.Q12); break;
+            case 12: questionText.setText(R.string.Q13); break;
+            case 13: questionText.setText(R.string.Q14); break;
+            case 14: questionText.setText(R.string.Q15); break;
+            case 15: questionText.setText(R.string.Q16); break;
+            case 16: questionText.setText(R.string.Q17); break;
         }
     }
 }

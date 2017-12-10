@@ -3,4 +3,22 @@
     <string name="btnYes">Yes</string>
     <string name="btnNo">No</string>
     <string name="Q1">Has any person named in question 2 been charged with any offence that is currently awaiting legal action?</string>
+    <string name="Q2">Has any person named in question 2 been convicted of an offence in any country (including any conviction which is now removed from official records)?</string>
+    <string name="Q3">Has any person named in question 2 been the subject of an arrest warrant or interpol notice?</string>
+    <string name="Q4">Has any person named in question 2 been found guilty of a sexually based offence involving a child (including where no conviction was recorded)?</string>
+    <string name="Q5">Has any person named in question 2 been named on a sex offender register?</string>
+    <string name="Q6">Has any person named in question 2 been acquitted of any offence on the grounds of unsoundness of mind or insanity?</string>
+    <string name="Q7">Has any person named in question 2 been found by a court not fit to plead?</string>
+    <string name="Q8">Has any person named in question 2 been directly or indirectly involved in, or associated with, activities which would represent a risk to national security in Australia or any other country?</string>
+    <string name="Q9">Has any person named in question 2 been charged with, or indicted for: genocide, war crimes, crimes against humanity, torture, slavery, or any other crime that is otherwise of a serious international concern?</string>
+    <string name="Q10">Has any person named in question 2 been associated with a person, group or organisation that has been/is involved in criminal conduct?</string>
+    <string name="Q11">Has any person named in question 2 been associated with an organisation engaged in violence or engaged in acts of violence (including war, insurgency, freedom fighting, terrorism, protest) either overseas or in Australia?</string>
+    <string name="Q12">Has any person named in question 2 served in a military force, police force, state sponsored/private militia or intelligence agency (including secret police)?</string>
+    <string name="Q13">Has any person named in question 2 undergone any military/paramilitary training, been trained in weapons/explosives or in the manufacture of chemical/biological products?</string>
+    <string name="Q14">Has any person named in question 2 been involved in people smuggling or people trafficking offences?</string>
+    <string name="Q15">Has any person named in question 2 been removed, deported or excluded from any country (including Australia)?</string>
+    <string name="Q16">Has any person named in question 2 overstayed a visa in any country (including Australia)?</string>
+    <string name="Q17">Has any person named in question 2 had any outstanding debts to the Australian Government or any public authority in Australia?</string>
+
+
 </resources>
