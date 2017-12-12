@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">RefugeePDF</string>
-    <string name="btnYes">Yes</string>
-    <string name="btnNo">No</string>
+    <string name="btnBack">Back</string>
+    <string name="btnNext">Next</string>
     <string name="Q1">Has any person named in question 2 been charged with any offence that is currently awaiting legal action?</string>
     <string name="Q2">Has any person named in question 2 been convicted of an offence in any country (including any conviction which is now removed from official records)?</string>
     <string name="Q3">Has any person named in question 2 been the subject of an arrest warrant or interpol notice?</string>
