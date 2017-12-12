@@ -170,48 +170,19 @@ public class MainActivity extends AppCompatActivity {
 
         if(v.getId() == R.id.btnNext){
 
-            if(radioYes.isChecked()){
-
-                answerMap.put(questionNum, "1");
-                fieldMap.put(questionNum, allFields.get(questionNum + 63));
-                radioGroup.clearCheck();
-
-            } else if(radioNo.isChecked()){
-                answerMap.put(questionNum, "0");
-                fieldMap.put(questionNum, allFields.get(questionNum + 63));
-                radioGroup.clearCheck();
-            } else{
-                answerMap.put(questionNum, "skip");
-                fieldMap.put(questionNum, allFields.get(questionNum + 63));
-            }
-
+            saveAns();
             questionNum++;
-
-            if(answerMap.containsKey(questionNum)){
-                if(answerMap.get(questionNum).equals("1")){
-                    radioYes.toggle();
-                }
-                else if(answerMap.get(questionNum).equals("0")){
-                    radioNo.toggle();
-                }
-            }
-
-
+            setRadio();
         }
+
         else if(v.getId() == R.id.btnBack){
             if(questionNum == 0){
                 return;
             }
-            questionNum--;
-            if(answerMap.get(questionNum).equals("1")){
-                radioYes.toggle();
 
-            }
-            else if(answerMap.get(questionNum).equals("0")){
-                radioNo.toggle();
-            } else {
-                radioGroup.clearCheck();
-            }
+            saveAns();
+            questionNum--;
+            setRadio();
 
         }
 
@@ -239,6 +210,42 @@ public class MainActivity extends AppCompatActivity {
             case 14: questionText.setText(R.string.Q15); questionNumText.setText("Q3.15");break;
             case 15: questionText.setText(R.string.Q16); questionNumText.setText("Q3.16");break;
             case 16: questionText.setText(R.string.Q17); questionNumText.setText("Q3.17");break;
+        }
+    }
+
+    private void saveAns(){
+        RadioGroup radioGroup = findViewById(R.id.radioYesNo);
+        RadioButton radioYes = findViewById(R.id.radioYes);
+        RadioButton radioNo = findViewById(R.id.radioNo);
+
+        if(radioYes.isChecked()){
+            answerMap.put(questionNum, "1");
+            fieldMap.put(questionNum, allFields.get(questionNum + 63));
+            radioGroup.clearCheck();
+
+        } else if(radioNo.isChecked()){
+            answerMap.put(questionNum, "0");
+            fieldMap.put(questionNum, allFields.get(questionNum + 63));
+            radioGroup.clearCheck();
+        } else{
+            answerMap.put(questionNum, "skip");
+            fieldMap.put(questionNum, allFields.get(questionNum + 63));
+        }
+    }
+
+    private void setRadio(){
+        RadioButton radioYes = findViewById(R.id.radioYes);
+        RadioButton radioNo = findViewById(R.id.radioNo);
+
+        if(!answerMap.containsKey(questionNum)){
+            return;
+        }
+
+        if(answerMap.get(questionNum).equals("1")){
+            radioYes.toggle();
+        }
+        else if(answerMap.get(questionNum).equals("0")){
+            radioNo.toggle();
         }
     }
 }

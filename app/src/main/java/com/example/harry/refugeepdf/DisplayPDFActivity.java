@@ -46,7 +46,7 @@ public class DisplayPDFActivity extends AppCompatActivity {
             startActivity(intent);
         }
         catch (ActivityNotFoundException e) {
-            Log.i("DISPLAYYYY", e.getMessage());
+            Toast.makeText(this, "Cannot find application to open PDF", Toast.LENGTH_LONG).show();
         }
     }
 }
