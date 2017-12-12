@@ -217,6 +217,8 @@ public class MainActivity extends AppCompatActivity {
 
         if(questionNum == 17){
             WriteToPDF.writeFields(answerMap, fieldMap);
+            Intent intent = new Intent(this, DisplayPDFActivity.class);
+            startActivity(intent);
         }
 
         switch(questionNum){

@@ -31,6 +31,9 @@ public class WriteToPDF {
 
                 String value = answerMap.get(i);
                 Log.i("WRITETOPDF", Integer.toString(answerMap.size()));
+                if(value.equals("skip")){
+                    continue;
+                }
 
                 //If value is binary, then it is a checkbox and we need different methods for filling in
                 if(value.equals("1") || value.equals("0")){
